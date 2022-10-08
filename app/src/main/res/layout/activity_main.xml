@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:clickable="true"
+        tools:context=".MainActivity"
+        android:background="#83DA1E">
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mainHorizontalGuideline"
+            app:layout_constraintGuide_percent="0.50"
+            android:orientation="horizontal"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/verticalGuideline10"
+            app:layout_constraintGuide_percent="0.10"
+            android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/verticalGuideline30"
+            app:layout_constraintGuide_percent="0.30"
+            android:orientation="vertical"/>
+
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:srcCompat="@drawable/usa"
+            android:id="@+id/usa"
+            app:layout_constraintStart_toStartOf="@id/verticalGuideline10"
+            app:layout_constraintEnd_toStartOf="@id/verticalGuideline30"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline12"/>
+
+    <ImageView
+            app:srcCompat="@drawable/europe"
+            android:id="@+id/europe"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="@id/verticalGuideline10"
+            app:layout_constraintEnd_toStartOf="@id/verticalGuideline30"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toTopOf="@+id/horizontalGuideline12"
+            app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline25"/>
+    <ImageView
+            app:srcCompat="@drawable/russia"
+            android:id="@+id/russia"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="@id/verticalGuideline10"
+            app:layout_constraintEnd_toStartOf="@id/verticalGuideline30"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintTop_toTopOf="@+id/horizontalGuideline25"
+            app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline37"/>
+
+    <ImageView
+            app:srcCompat="@drawable/az"
+            android:id="@+id/az"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="@id/verticalGuideline10"
+            app:layout_constraintEnd_toStartOf="@id/verticalGuideline30"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintTop_toTopOf="@+id/horizontalGuideline37"
+            app:layout_constraintBottom_toTopOf="@+id/mainHorizontalGuideline"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/verticalGuideline45"
+            app:layout_constraintGuide_percent="0.45"
+            android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/verticalGuideline90"
+            app:layout_constraintGuide_percent="0.90"
+            android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/horizontalGuideline12"
+            app:layout_constraintGuide_percent="0.125"
+            android:orientation="horizontal"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/horizontalGuideline25"
+            app:layout_constraintGuide_percent="0.250"
+            android:orientation="horizontal"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/horizontalGuideline37"
+            app:layout_constraintGuide_percent="0.375"
+            android:orientation="horizontal"/>
+
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/editTextDollar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/verticalGuideline45"
+            app:layout_constraintEnd_toStartOf="@+id/verticalGuideline90"
+            app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline12"
+            android:hint="Dollar"
+            android:maxLines="1"
+            android:singleLine="true" android:inputType="numberDecimal"/>
+
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/editTextEuro"
+            app:layout_constraintTop_toTopOf="@+id/horizontalGuideline12"
+            app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline25"
+            app:layout_constraintStart_toStartOf="@+id/verticalGuideline45"
+            app:layout_constraintEnd_toStartOf="@+id/verticalGuideline90"
+            android:hint="Euro"
+            android:maxLines="1"
+            android:singleLine="true" android:inputType="numberDecimal"/>
+
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/editTextRouble"
+            app:layout_constraintTop_toTopOf="@+id/horizontalGuideline25"
+            app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline37"
+            app:layout_constraintStart_toStartOf="@+id/verticalGuideline45"
+            app:layout_constraintEnd_toStartOf="@+id/verticalGuideline90"
+            android:hint="Rouble"
+            android:maxLines="1"
+            android:singleLine="true"/>
+
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/editTextManat"
+            app:layout_constraintTop_toTopOf="@+id/horizontalGuideline37"
+            app:layout_constraintBottom_toTopOf="@+id/mainHorizontalGuideline"
+            app:layout_constraintVertical_bias="0.574"
+            app:layout_constraintEnd_toStartOf="@+id/verticalGuideline90"
+            app:layout_constraintStart_toStartOf="@+id/verticalGuideline45"
+            android:hint="Manat"
+            android:maxLines="1"
+            android:singleLine="true"/>
+
+    <Button
+            android:text="Update data"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp" android:id="@+id/button"
+            app:layout_constraintTop_toTopOf="@+id/mainHorizontalGuideline"
+            app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline57"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="@color/green"
+            android:onClick="updateCurrencyData" android:tooltipText="Info from Russian Central Bank!"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/horizontalGuideline57"
+            app:layout_constraintGuide_percent="0.57"
+            android:orientation="horizontal"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
