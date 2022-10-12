@@ -1,5 +1,6 @@
 package com.example.currencyconverter;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -44,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         init();
     }
 
+    @SuppressLint("ResourceAsColor")
     public void init() {
-
         editDollar = findViewById(R.id.editTextDollar);
         editEuro = findViewById(R.id.editTextEuro);
         editRouble = findViewById(R.id.editTextRouble);

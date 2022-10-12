@@ -121,7 +121,7 @@
             app:layout_constraintBottom_toTopOf="@+id/horizontalGuideline12"
             android:hint="Dollar"
             android:maxLines="1"
-            android:singleLine="true" android:inputType="numberDecimal"/>
+            android:singleLine="true" android:inputType="numberDecimal" android:textColor="#000000"/>
 
     <EditText
             android:layout_width="0dp"
@@ -134,7 +134,7 @@
             app:layout_constraintEnd_toStartOf="@+id/verticalGuideline90"
             android:hint="Euro"
             android:maxLines="1"
-            android:singleLine="true" android:inputType="numberDecimal"/>
+            android:singleLine="true" android:inputType="numberDecimal" android:textColor="#000000"/>
 
     <EditText
             android:layout_width="0dp"
@@ -148,7 +148,7 @@
             app:layout_constraintEnd_toStartOf="@+id/verticalGuideline90"
             android:hint="Rouble"
             android:maxLines="1"
-            android:singleLine="true"/>
+            android:singleLine="true" android:textColor="#000000"/>
 
     <EditText
             android:layout_width="0dp"
@@ -163,7 +163,7 @@
             app:layout_constraintStart_toStartOf="@+id/verticalGuideline45"
             android:hint="Manat"
             android:maxLines="1"
-            android:singleLine="true"/>
+            android:singleLine="true" android:textColor="#000000"/>
 
     <Button
             android:text="Update data"
