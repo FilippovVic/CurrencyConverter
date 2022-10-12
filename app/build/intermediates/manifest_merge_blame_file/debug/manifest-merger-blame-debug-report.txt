@@ -1,0 +1,83 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.currencyconverter"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="28"
+8-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+11-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:5:5-78
+11-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:5:22-76
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:6:5-66
+12-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:6:22-64
+13
+14    <application
+14-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:8:5-26:19
+15        android:allowBackup="true"
+15-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:9:13-39
+16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+16-->[androidx.core:core:1.8.0] C:\Users\User\.gradle\caches\transforms-3\aabea3a07931a52841c09721b3f541fa\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+17        android:debuggable="true"
+18        android:extractNativeLibs="false"
+19        android:icon="@mipmap/ic_launcher"
+19-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:10:13-47
+20        android:label="@string/app_name"
+20-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:11:13-45
+21        android:roundIcon="@mipmap/ic_launcher_round"
+21-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:12:13-58
+22        android:supportsRtl="true"
+22-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:13:13-39
+23        android:theme="@style/Theme.CurrencyConverter" >
+23-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:14:13-59
+24        <activity
+24-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:15:9-25:20
+25            android:name="com.example.currencyconverter.MainActivity"
+25-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:17:17-45
+26            android:exported="true"
+26-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:19:17-40
+27            android:screenOrientation="portrait"
+27-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:18:17-53
+28            android:theme="@style/Theme.AppCompat.Starting" >
+28-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:16:17-64
+29            <intent-filter>
+29-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:20:13-24:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:21:17-68
+30-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:21:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:23:17-76
+32-->D:\Apps\CurrencyConverter\app\src\main\AndroidManifest.xml:23:27-74
+33            </intent-filter>
+34        </activity>
+35
+36        <provider
+36-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\c68bf547d8153864e116103b3c54fbba\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+37            android:name="androidx.startup.InitializationProvider"
+37-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\c68bf547d8153864e116103b3c54fbba\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+38            android:authorities="com.example.currencyconverter.androidx-startup"
+38-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\c68bf547d8153864e116103b3c54fbba\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+39            android:exported="false" >
+39-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\c68bf547d8153864e116103b3c54fbba\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+40            <meta-data
+40-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\c68bf547d8153864e116103b3c54fbba\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+41                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+41-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\c68bf547d8153864e116103b3c54fbba\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+42                android:value="androidx.startup" />
+42-->[androidx.emoji2:emoji2:1.2.0] C:\Users\User\.gradle\caches\transforms-3\c68bf547d8153864e116103b3c54fbba\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+43            <meta-data
+43-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\f45ee2d75fa2f4d935b35c1ca041f501\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+44                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+44-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\f45ee2d75fa2f4d935b35c1ca041f501\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+45                android:value="androidx.startup" />
+45-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\User\.gradle\caches\transforms-3\f45ee2d75fa2f4d935b35c1ca041f501\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+46        </provider>
+47    </application>
+48
+49</manifest>
