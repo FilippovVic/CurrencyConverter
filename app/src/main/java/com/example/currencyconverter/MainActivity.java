@@ -17,14 +17,14 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private float dollar;
-    private float euro;
-    private float manat;
+    private double dollar;
+    private double euro;
+    private double manat;
 
-    private float dollarSetValue;
-    private float euroSetValue;
-    private float roubleSetValue;
-    private float manatSetValue;
+    private double dollarSetValue;
+    private double euroSetValue;
+    private double roubleSetValue;
+    private double manatSetValue;
 
     private ArrayList<String> list;
 
@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText editEuro;
     private EditText editRouble;
     private EditText editManat;
+
+    private double scale;
 
     private Toast toast;
 
@@ -51,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         editEuro = findViewById(R.id.editTextEuro);
         editRouble = findViewById(R.id.editTextRouble);
         editManat = findViewById(R.id.editTextManat);
+
+        scale = Math.pow(10, 4);
 
         editDollar.setOnKeyListener((view, i, keyEvent) -> {
             if (keyEvent.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
@@ -135,16 +139,16 @@ public class MainActivity extends AppCompatActivity {
 
                         if (!editDollar.getText().toString().equals("")) {
 
-                            dollarSetValue = Float.parseFloat(editDollar.getText().toString());
+                            dollarSetValue = Double.parseDouble(editDollar.getText().toString());
                             editDollar.setText(String.valueOf(dollarSetValue));
 
-                            euroSetValue = dollarSetValue * dollar / euro;
-                            editEuro.setText(String.valueOf(euroSetValue));
+                            euroSetValue = (dollarSetValue * dollar) / euro;
+                            editEuro.setText(String.valueOf(Math.ceil(euroSetValue * scale)/scale));
 
-                            editRouble.setText(String.valueOf(dollarSetValue * dollar));
+                            editRouble.setText(String.valueOf(Math.ceil(dollarSetValue * dollar * scale)/scale));
 
-                            manatSetValue = dollarSetValue * dollar / manat;
-                            editManat.setText(String.valueOf(manatSetValue));
+                            manatSetValue =  (dollarSetValue * dollar) / manat;
+                            editManat.setText(String.valueOf(Math.ceil(manatSetValue * scale)/scale));
                         } else {
 
                             editDollar.setText("");
@@ -158,16 +162,16 @@ public class MainActivity extends AppCompatActivity {
 
                         if (!editEuro.getText().toString().equals("")) {
 
-                            euroSetValue = Float.parseFloat(editEuro.getText().toString());
+                            euroSetValue = Double.parseDouble(editEuro.getText().toString());
                             editEuro.setText(String.valueOf(euroSetValue));
 
                             dollarSetValue = (euroSetValue * euro) / dollar;
-                            editDollar.setText(String.valueOf(dollarSetValue));
+                            editDollar.setText(String.valueOf(Math.ceil(dollarSetValue * scale)/scale));
 
-                            editRouble.setText(String.valueOf(euroSetValue * euro));
+                            editRouble.setText(String.valueOf(Math.ceil(euroSetValue * euro * scale)/scale));
 
                             manatSetValue = (euroSetValue * euro) / manat;
-                            editManat.setText(String.valueOf(manatSetValue));
+                            editManat.setText(String.valueOf(Math.ceil(manatSetValue * scale)/scale));
                         } else {
 
                             editDollar.setText("");
@@ -181,17 +185,17 @@ public class MainActivity extends AppCompatActivity {
 
                         if (!editRouble.getText().toString().equals("")) {
 
-                            roubleSetValue = Float.parseFloat(editRouble.getText().toString());
+                            roubleSetValue = Double.parseDouble(editRouble.getText().toString());
                             editRouble.setText(String.valueOf(roubleSetValue));
 
                             dollarSetValue = roubleSetValue / dollar;
-                            editDollar.setText(String.valueOf(dollarSetValue));
+                            editDollar.setText(String.valueOf(Math.ceil(dollarSetValue * scale)/scale));
 
                             euroSetValue = roubleSetValue / euro;
-                            editEuro.setText(String.valueOf(euroSetValue));
+                            editEuro.setText(String.valueOf(Math.ceil(euroSetValue * scale)/scale));
 
                             manatSetValue = roubleSetValue / manat;
-                            editManat.setText(String.valueOf(manatSetValue));
+                            editManat.setText(String.valueOf(Math.ceil(manatSetValue * scale)/scale));
                         } else {
 
                             editDollar.setText("");
@@ -205,16 +209,16 @@ public class MainActivity extends AppCompatActivity {
 
                         if (!editManat.getText().toString().equals("")) {
 
-                            manatSetValue = Float.parseFloat(editManat.getText().toString());
+                            manatSetValue = Double.parseDouble(editManat.getText().toString());
                             editManat.setText(String.valueOf(manatSetValue));
 
-                            euroSetValue = manatSetValue * manat / euro;
-                            editEuro.setText(String.valueOf(euroSetValue));
+                            euroSetValue = (manatSetValue * manat) / euro;
+                            editEuro.setText((String.valueOf(Math.ceil(euroSetValue * scale)/scale)));
 
-                            editRouble.setText(String.valueOf(manatSetValue * manat));
+                            editRouble.setText(String.valueOf(Math.ceil(manatSetValue * manat * scale)/scale));
 
-                            dollarSetValue = manatSetValue * manat / dollar;
-                            editDollar.setText(String.valueOf(dollarSetValue));
+                            dollarSetValue = (manatSetValue * manat) / dollar;
+                            editDollar.setText(String.valueOf(Math.ceil(dollarSetValue * scale)/scale));
                         } else {
 
                             editDollar.setText("");
@@ -252,9 +256,9 @@ public class MainActivity extends AppCompatActivity {
             }
             list = values.getValues();
 
-            dollar = Float.parseFloat(list.get(0));
-            euro = Float.parseFloat(list.get(1));
-            manat = Float.parseFloat(list.get(2));
+            dollar = Double.parseDouble(list.get(0));
+            euro = Double.parseDouble(list.get(1));
+            manat = Double.parseDouble(list.get(2));
 
         } else {
 

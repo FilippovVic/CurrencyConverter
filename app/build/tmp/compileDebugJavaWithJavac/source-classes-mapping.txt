@@ -1,6 +1,6 @@
-com/example/currencyconverter/MainActivity.java
- com.example.currencyconverter.MainActivity
-com/example/currencyconverter/Values.java
- com.example.currencyconverter.Values
 com/example/currencyconverter/BuildConfig.java
  com.example.currencyconverter.BuildConfig
+com/example/currencyconverter/Values.java
+ com.example.currencyconverter.Values
+com/example/currencyconverter/MainActivity.java
+ com.example.currencyconverter.MainActivity
