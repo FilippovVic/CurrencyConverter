@@ -6,6 +6,7 @@
 ![Screenshot3](https://user-images.githubusercontent.com/113792486/198827606-864f8fe7-ed48-44b9-8738-92409eaad30a.jpg)
 ## How to launch :question:
 - You can directly download builded apk from outputs (minimum Android version 9.0).
+##### :warning: So far, I don’t know how you can correctly launch the project on your computer, I haven’t figured it out yet ... I would be glad if you share the method. For now, you can just look at the code or download the apk file... :warning:
 ## About :question:
 - Written using jsoup library;
 - Uses info from Russian Central Bank https://www.cbr.ru/currency_base/daily/.
